@@ -1,5 +1,6 @@
 import './App.css';
-import UserDetails from './UserDetails';
+//import UserDetails from './UserDetails';
+import UserDetailsFuncComponent from './UserDetailsFuncComponent';
 import {getUserDetailsFromStore as store} from './Components/store';
 import {Provider} from 'react-redux';
 import {UserProvider} from './Context'
@@ -9,7 +10,8 @@ function App() {
     <div className="App">
       <UserProvider value={{userState:[],APIcall:false}}>
         <Provider store={store}>
-        <UserDetails />
+        {/* <UserDetails /> */}
+        <UserDetailsFuncComponent />
         </Provider>
       </UserProvider>
     </div>
